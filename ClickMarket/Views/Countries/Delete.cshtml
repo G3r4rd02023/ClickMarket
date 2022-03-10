@@ -1,0 +1,27 @@
+﻿@model ClickMarket.Data.Entities.Country
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h3>Borrar</h3>
+
+<h3>Estás seguro de borrar este registro?</h3>
+<div>
+    <h4>País</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Borrar" class="btn btn-outline-danger" /> 
+        <a asp-action="Index" class=" btn btn-outline-success">Regresar</a>
+    </form>
+</div>
